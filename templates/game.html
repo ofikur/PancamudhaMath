@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PancamudhaMath - Permainan</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/game.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container game-container">
+      <header>
+        <div class="logo-container">
+          <img
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="PancamudhaMath Logo"
+            class="logo"
+          />
+          <h1>PancamudhaMath</h1>
+        </div>
+      </header>
+
+      <main>
+        <div class="game-screen">
+          <div class="game-info">
+            <div class="score-container">
+              <span class="score-label">Skor:</span>
+              <span id="score">0</span>
+            </div>
+            <div class="level-container">
+              <span class="level-label">Level:</span>
+              <span id="level">1</span>
+            </div>
+            <div class="timer-container">
+              <span class="timer-label">Waktu:</span>
+              <span id="timer">60</span>
+            </div>
+          </div>
+
+          <div class="question-container">
+            <div class="question-number">
+              Soal #<span id="question-number">1</span>
+            </div>
+            <div class="question-text" id="question">Memuat soal...</div>
+          </div>
+
+          <div class="answer-container">
+            <input
+              type="text"
+              id="answer-input"
+              placeholder="Masukkan jawaban Anda..."
+            />
+            <button id="submit-answer">Jawab</button>
+          </div>
+
+          <div class="feedback-container" id="feedback">
+            <!-- Feedback will appear here -->
+          </div>
+
+          <div class="controls">
+            <button id="next-question" class="next-btn">Soal Berikutnya</button>
+            <button id="end-game" class="end-btn">Akhiri Permainan</button>
+          </div>
+        </div>
+
+        <div class="results-screen" style="display: none">
+          <h2>Hasil Permainan</h2>
+          <div class="results-container">
+            <div class="result-item">
+              <span class="result-label">Skor Akhir:</span>
+              <span id="final-score">0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Soal Dijawab:</span>
+              <span id="questions-answered">0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Akurasi:</span>
+              <span id="accuracy">0%</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Waktu:</span>
+              <span id="time-taken">0 detik</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Bonus Waktu:</span>
+              <span id="time-bonus">0</span>
+            </div>
+          </div>
+
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+
+          <div class="achievement">
+            <h3 id="achievement-text">
+              Hebat! Kamu telah menyelesaikan permainan!
+            </h3>
+          </div>
+
+          <div class="action-buttons">
+            <button id="play-again" class="play-again-btn">Main Lagi</button>
+            <button id="back-to-home" class="home-btn">
+              Kembali ke Beranda
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 PancamudhaMath - Game Matematika Terbaik</p>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+  </body>
+</html>
