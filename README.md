@@ -122,8 +122,7 @@ Ide untuk pengembangan lebih lanjut:
 
 ## Kontributor
 
-- Developed by: [Nama Anda]
-- Tanggal: [Tanggal Pembuatan]
+- Developed by: Ofikur R.
 - Versi: 1.0
 
 ---
