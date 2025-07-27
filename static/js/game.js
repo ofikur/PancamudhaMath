@@ -1,5 +1,3 @@
-// game.js - Game functionality for PancamudhaMath
-
 document.addEventListener("DOMContentLoaded", function () {
   // DOM Elements
   const questionText = document.getElementById("question");

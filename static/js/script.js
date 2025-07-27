@@ -1,5 +1,3 @@
-// script.js - Main JavaScript for PancamudhaMath
-
 document.addEventListener("DOMContentLoaded", function () {
   // DOM Elements
   const levelButtons = document.querySelectorAll(".level-btn");

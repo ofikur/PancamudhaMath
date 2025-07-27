@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 def generate_question(level):
-    """Generate a math question based on difficulty level"""
+    # Generate a math question based on difficulty level
     if level == 1:  # Easy
         num1 = random.randint(1, 10)
         num2 = random.randint(1, 10)
@@ -95,7 +95,7 @@ def generate_question(level):
             a = 1
             b = -(root1 + root2)
             c = root1 * root2
-            answer = root1  # We'll ask for the positive root or the first root
+            answer = root1
             question = f"Solve for x: x^2 + ({b})x + ({c}) = 0. Hint: One root is {root1}"
     
     return question, answer
